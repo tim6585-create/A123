@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>瑞興國小母親節系列活動｜演書結合品格教育 感恩惜福跳蚤市場溫馨登場</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ec4899;
+      --primary-dark: #be185d;
+      --secondary: #22c55e;
+      --accent: #f59e0b;
+      --bg-base: #fffafc;
+      --text-main: #1f2937;
+      --text-muted: #6b7280;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', -apple-system, sans-serif;
+      background-color: var(--bg-base);
+      background-image: radial-gradient(circle at 2px 2px, #f3e8ff 1px, transparent 0);
+      background-size: 32px 32px;
+      color: var(--text-main);
+      line-height: 1.9;
+      overflow-x: hidden;
+    }
+
+    .top-bar {
+      height: 8px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+      width: 100%;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      padding: 1.25rem 5%;
+      display: flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .brand {
+      font-weight: 900;
+      font-size: 1.35rem;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    header.dynamic-header {
+      padding: 6rem 5% 10rem;
+      position: relative;
+      background: var(--white);
+      text-align: center;
+    }
+
+    .header-shape {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .header-shape svg {
+      position: relative;
+      display: block;
+      width: calc(150% + 1.3px);
+      height: 100px;
+    }
+
+    .header-shape .shape-fill {
+      fill: var(--bg-base);
+    }
+
+    .title-box {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background: var(--secondary);
+      color: white;
+      font-weight: 800;
+      border-radius: 4px;
+      margin-bottom: 2rem;
+      transform: skewX(-10deg);
+      letter-spacing: 1px;
+    }
+
+    .dynamic-header h1 {
+      font-size: clamp(2.1rem, 7vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      color: var(--text-main);
+    }
+
+    .sub-title {
+      font-size: 1.18rem;
+      color: var(--primary-dark);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .content-layout {
+      max-width: 1200px;
+      margin: -4rem auto 5rem;
+      padding: 0 5%;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    article.news-body {
+      background: var(--white);
+      padding: 4rem;
+      border-radius: 14px;
+      border: 1px solid #f3e8ff;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem 2rem;
+      margin-bottom: 2.5rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      border-bottom: 1px solid #f3f4f6;
+      padding-bottom: 1.25rem;
+    }
+
+    .rich-content {
+      font-size: 1.15rem;
+    }
+
+    .rich-content p {
+      margin-bottom: 1.8rem;
+      text-align: justify;
+    }
+
+    .rich-content strong {
+      color: var(--primary-dark);
+      border-bottom: 2px solid #fde68a;
+    }
+
+    .featured-quote {
+      margin: 3rem 0;
+      padding: 2.6rem;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      border-radius: 0 50px 0 50px;
+      position: relative;
+      box-shadow: 0 10px 25px rgba(190,24,93,0.18);
+    }
+
+    .featured-quote::before {
+      content: "“";
+      position: absolute;
+      top: 8px;
+      left: 18px;
+      font-size: 7rem;
+      opacity: 0.18;
+      font-family: serif;
+    }
+
+    blockquote {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.55;
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .cite-info {
+      text-align: right;
+      font-size: 1rem;
+      opacity: 0.92;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .contact-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 12px;
+      border-top: 5px solid var(--primary);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+    }
+
+    .sidebar-heading {
+      font-size: 1.18rem;
+      font-weight: 900;
+      margin-bottom: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .contact-info-block {
+      margin-bottom: 1.4rem;
+    }
+
+    .contact-info-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-title {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 800;
+      display: block;
+      margin-bottom: 0.35rem;
+      letter-spacing: 0.8px;
+    }
+
+    .contact-person {
+      font-size: 1.08rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-phone {
+      font-size: 0.95rem;
+      color: var(--primary-dark);
+    }
+
+    .mini-note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    footer {
+      background: #1f2937;
+      color: #d1d5db;
+      padding: 4rem 5% 2rem;
+      text-align: center;
+    }
+
+    .footer-title {
+      color: var(--white);
+      font-size: 1.45rem;
+      font-weight: 900;
+      margin-bottom: 0.8rem;
+    }
+
+    .icon {
+      width: 1.25rem;
+      height: 1.25rem;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.5;
+    }
+
+    @media (max-width: 1024px) {
+      .content-layout {
+        grid-template-columns: 1fr;
+        margin-top: -3rem;
+      }
+
+      article.news-body {
+        padding: 2.4rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      header.dynamic-header {
+        padding: 4rem 5% 8rem;
+      }
+
+      .article-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      blockquote {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar"></div>
+
+  <nav>
+    <div class="brand">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 5-3.5 7.5-8 8-4.5-.5-8-3-8-8V7l8-4z"/></svg>
+      瑞興國小新聞網頁版
+    </div>
+  </nav>
+
+  <header class="dynamic-header">
+    <div class="title-box">
+      <div class="badge">MOTHER'S DAY SPECIAL</div>
+      <h1>縣長、鄉長親臨見證最暖母親節！<br>瑞興國小演書結合品格教育、跳蚤市場實踐惜福願景</h1>
+      <p class="sub-title">快樂 × 溫馨 × 感恩 × 健康</p>
+    </div>
+    <div class="header-shape">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+      </svg>
+    </div>
+  </header>
+
+  <main class="content-layout">
+    <article class="news-body">
+      <div class="article-meta">
+        <span>發稿日期：待補</span>
+        <span>新聞來源：瑞興國小訊</span>
+        <span>校長：胡定凡</span>
+      </div>
+
+      <div class="rich-content">
+        <p><strong>【瑞興國小訊】</strong>為迎接母親節並深化品格教育與感恩惜福精神，瑞興國小辦理母親節系列活動，規劃「班級演書」與「感恩惜福跳蚤市場」兩大主軸，結合閱讀教育、情意表達與生活實踐，打造溫馨且富教育意涵的校園學習情境。活動當日更邀請縣長及鄉長蒞臨參與，與全校親師生共同見證這場融合感恩、快樂與健康的教育盛會，充分展現學校「快樂、溫馨、感恩、健康」的辦學願景。</p>
+
+        <p>瑞興國小表示，母親節不僅是表達感謝的節日，更是推動品格教育與家庭教育的重要契機。本次活動第一階段由各班推動班級演書，透過閱讀文本與戲劇表現的融合，引導學生從故事中理解孝親、尊重、責任與同理等核心價值。學生在教師引導下，歷經文本討論、角色分工與情境排練，最終呈現一場場富含情感與教育意義的演出，將閱讀轉化為深刻的生命體驗。</p>
+
+        <p>各班演書內容多元且具創意，有的以親子互動為主題，展現家庭中細膩的情感交流；有的透過生活情境呈現孩子如何以實際行動回應父母的付出；亦有班級將品格議題融入故事架構，使學生在演出中學習尊重、關懷與感恩。透過演書活動，學生不僅提升表達能力與閱讀理解，更在合作學習中培養責任感與團隊精神。</p>
+
+        <div class="featured-quote">
+          <blockquote>「教育的核心在於培養學生正確的價值觀與良好的生活態度。透過閱讀、表演與實踐三個面向，學生不僅學會感恩，也更懂得惜福與分享。」</blockquote>
+          <div class="cite-info">— 瑞興國小校長 胡定凡</div>
+        </div>
+
+        <p>第二階段辦理的「感恩惜福跳蚤市場」，則將感恩教育延伸至生活實踐層面。學生整理家中仍具使用價值的物品進行分享與交換，透過實際參與學習珍惜資源與延續物品價值。活動現場熱鬧溫馨，各班攤位布置創意十足，學生主動介紹物品、與來訪家長互動，展現自信與溝通能力，形成兼具教育性與趣味性的學習場域。</p>
+
+        <p>當天縣長及鄉長蒞臨活動現場，親自走訪各班攤位與演書場域，對學生的表現給予高度肯定，並讚揚學校將品格教育與節慶活動結合，讓學生在真實情境中學習感恩與惜福。長官們也肯定學校透過多元活動深化親師生情感連結，讓校園教育更貼近生活、更加溫暖。</p>
+
+        <p>學校進一步指出，跳蚤市場不僅是物品交流的平台，更是一堂生活教育課。學生從物品整理、價格思考到現場互動，學習責任分工與問題解決，同時體會分享與關懷的價值。透過這樣的學習歷程，學生得以將抽象的品格概念轉化為具體行動，落實於日常生活之中。</p>
+
+        <p>整體活動在親師生熱情參與下圓滿完成，校園中洋溢著歡樂與感動的氛圍。學生在演書中展現創意與情感，在跳蚤市場中學習分享與珍惜，家長則透過參與看見孩子的成長，教師亦在活動中深化課程實踐，充分展現學校推動全人教育的成果。未來，瑞興國小將持續結合節慶教育
